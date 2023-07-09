@@ -4,12 +4,11 @@ body{
   background-image: url(https://cdn.wallpapersafari.com/54/86/cU6JWo.jpg);
 }
 .container{
-  display: flex;  
+  display: grid;  
   width: 512px;
   height: 512px;
   align-self: center;
   margin-top: 30px;
-  flex-wrap: wrap;
   align-content: flex-start;
   flex-direction: column;
   box-sizing: border-box;
@@ -21,6 +20,7 @@ body{
   border: 0.5px solid black;
 }
 .box{
+  
   justify-content: center;
 }
 
