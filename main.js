@@ -1,10 +1,12 @@
 const gridButton = document.querySelector('.grid-button');
 const container = document.querySelector('.container');
+const clearButton = document.querySelector('.clear');
 let gridSize = 16;
 const cubesClass = '.cubes';
 
 function randomColor() {
-  const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff', '#800080', '#008000', '#000080'];
+  colors = ['red', 'green', 'blue', 'yellow', 'magenta', 'cyan', 'purple', 'darkgreen', 'navyblue', 'orange', 'darkorange', 'brown', 'teal', 'pink', 'khaki', 'maroon', 'darkkhaki', 'indigo', 'ivory', 'olive', 'aquamarine', 'beige', 'bisque', 'orangered', 'saddlebrown', 'seagreen', 'chocolate', 'olivedrab', 'lightseagreen', 'tan', 'skyblue', 'cadetblue']
+
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
   return randomColor;
 }
@@ -49,3 +51,10 @@ for (let row = 0; row < gridSize; row++) {
     })
   }
 }
+clearButton.addEventListener('click', function(){
+  const elements = document.querySelectorAll(cubesClass);
+for (let i = 0; i < elements.length; i++) {
+  elements[i].style.backgroundColor = "white";
+}
+
+})
